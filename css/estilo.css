@@ -1,0 +1,107 @@
+@font-face {
+    font-family: defaultFont;
+    src: url('../assets/fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+*{
+    font-family: defaultFont;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    background-image: linear-gradient(to right bottom,#c94747, #171717);
+    flex-direction: column;
+    /*#c94747 cor antiga    */
+}
+
+.title{
+    font-size: 30px;
+    color: rgb(255, 223, 223);
+    width: 100%;
+    backdrop-filter: blue(10px);
+    background-color: rgba(0, 0, 0, 50%);
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;    
+}
+
+#songs{
+    flex: 1;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.song{
+    width: 167px;
+    height: 240px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 50%);
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.song p{
+    text-align: center;
+    color: white;
+}
+
+.song button{
+    background-color: #c94747;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.song img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+#modal{
+    width: 90%;
+    height: 70%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 50%);
+    flex-direction: column;
+    position: fixed;
+    transform: translate(5%, 25%);
+    border-radius: 20px;
+    display: none;
+}
+
+#modal p, audio{
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+}
+
+#modal img{
+    width: 310px;
+    height: 300px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+#modal button{
+    background-color: #c94747;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    font-weight: bold;
+    width: 90%;
+    margin: auto;
+    font-size: 30px;
+}
