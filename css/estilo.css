@@ -39,8 +39,8 @@ body {
 }
 
 .song{
-    width: 145px;
-    height: 240px;
+    width: 130px;
+    height: 220px;
     display: flex;
     padding: 10px;
     flex-direction: column;
