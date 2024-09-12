@@ -50,6 +50,7 @@ oSongArray.addSong("Exosphere", "./assets/img/exosphere.jpg", "./assets/audio/Cr
 oSongArray.addSong("Idolize", "./assets/img/idolize.jpg", "./assets/audio/Creo - Idolize.mp3")
 oSongArray.addSong("In Circles", "./assets/img/incircles.jpg", "./assets/audio/Creo - In Circles.webm")
 oSongArray.addSong("Shiawase (VIP)", "./assets/img/shiwase.jpg", "./assets/audio/Shiawase (VIP).webm")
+oSongArray.addSong("Wavelight", "./assets/img/wavelight.jpg", "./assets/audio/wavelight.mp3")
 oSongArray.addSong("Click", "./assets/img/click.jpg", "./assets/audio/click.mp3")
 
 function updateModal(event){
@@ -57,7 +58,7 @@ function updateModal(event){
     let songsContainer = document.getElementById("songs")
     let modalSongImg = document.getElementById("modalSongImg")
     let modalSongName = document.getElementById("modalSongName")
-    let modalSongUrl = document.getElementById("modalSongUrl")
+
     let eventId = event.target.id.split("-").pop()
 
     if(event.target.id != "btnSair"){
@@ -77,5 +78,16 @@ function updateModal(event){
 
 let btnSair = document.getElementById("btnSair")
 btnSair.addEventListener("click", updateModal)
+
+
+let modalSongUrl = document.getElementById("modalSongUrl")
+modalSongUrl.addEventListener('ended', function() {
+    let cbLoop = document.getElementById("cbLoop")
+    if(cbLoop.checked)
+    {
+        this.currentTime = 0;
+        this.play();
+    }
+}, false);
 
 oSongArray.addSongsToHtml()
