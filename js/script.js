@@ -54,6 +54,7 @@ oSongArray.addSong("Wavelight", "./assets/img/wavelight.jpg", "./assets/audio/wa
 oSongArray.addSong("Click", "./assets/img/click.jpg", "./assets/audio/click.mp3")
 
 function updateModal(event){
+    let title = document.getElementById("title")
     let modalContainer = document.getElementById("modal")
     let songsContainer = document.getElementById("songs")
     let modalSongImg = document.getElementById("modalSongImg")
@@ -64,30 +65,47 @@ function updateModal(event){
     if(event.target.id != "btnSair"){
         modalContainer.style.display = "flex"
         songsContainer.style.display = "none"
+        title.style.display = "none"
     }
     else{
         modalContainer.style.display = "none" 
         songsContainer.style.display = "flex"
+        title.style.display = "flex"
     }
     modalSongImg.src = oSongArray.songs[eventId].imgUrl
     modalSongName.innerHTML = oSongArray.songs[eventId].name
     modalSongUrl.src = oSongArray.songs[eventId].songUrl
-
-
 }
 
 let btnSair = document.getElementById("btnSair")
 btnSair.addEventListener("click", updateModal)
-
 
 let modalSongUrl = document.getElementById("modalSongUrl")
 modalSongUrl.addEventListener('ended', function() {
     let cbLoop = document.getElementById("cbLoop")
     if(cbLoop.checked)
     {
-        this.currentTime = 0;
-        this.play();
+        this.currentTime = 0
+        this.play()
     }
-}, false);
+}, false)
+
+function mudarTelas(event){
+    let songscont = document.getElementById("songs")
+    let playlistContainer = document.getElementById("playlistContainer")
+    if(event.target.id == "btnPlaylist"){
+        songscont.style.display = "none"
+        playlistContainer.style.display = "flex"
+    }
+    else if(event.target.id == "btnHome"){
+        songscont.style.display = "flex"
+        playlistContainer.style.display = "none"
+    }
+}
+
+let btnHome = document.getElementById("btnHome")
+let btnPlaylist = document.getElementById("btnPlaylist")
+btnHome.addEventListener("click", mudarTelas)
+btnPlaylist.addEventListener("click", mudarTelas)
 
 oSongArray.addSongsToHtml()

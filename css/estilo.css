@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     overflow-x: hidden;
     display: flex;
     background-image: linear-gradient(to right bottom,#c94747, #171717);
@@ -19,7 +19,7 @@ body {
     /*#c94747 cor antiga    */
 }
 
-.title{
+#title{
     font-size: 30px;
     color: rgb(255, 223, 223);
     width: 100%;
@@ -27,15 +27,19 @@ body {
     background-color: rgba(0, 0, 0, 50%);
     height: 40px;
     font-weight: bold;
-    text-align: center;
     padding-top: 10px;
-    padding-bottom: 10px;    
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
 }
 
 #songs{
     flex: 1;
     flex-wrap: wrap;
     display: flex;
+    height: auto;
+    padding-bottom: 60px;
 }
 
 .song{
@@ -69,14 +73,11 @@ body {
 }
 
 #modal{
-    width: 90%;
-    height: 70%;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 50%);
+    width: 100vw;
+    height: 93vh;
+    background-image: linear-gradient(to right bottom,#c94747, #171717);
     flex-direction: column;
     position: fixed;
-    transform: translate(5%, 25%);
-    border-radius: 20px;
     display: none;
 }
 
@@ -110,4 +111,43 @@ body {
     text-align: center;
     color: white;
     font-size: 20px;
+}
+
+#menu-buttons{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    position: fixed;
+    transform: translateY(1135%);
+    flex-direction: row;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#menu-buttons button{
+    width: 50%;
+    background-color: rgb(27, 27, 27);
+    border: none;
+    color: white;
+}
+
+#menu-buttons img{
+    width: 40px;
+    height: 40px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#playlistContainer{
+    flex: 1;
+    flex-wrap: wrap;
+    display: flex;
+    height: auto;
+    padding-bottom: 60px;
 }

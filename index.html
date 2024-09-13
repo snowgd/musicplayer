@@ -7,19 +7,25 @@
       <title></title>
     </head>
     <body>
-      <div class="title">
+      <div id="title">
         Better Music Player
       </div>
-      <div id="songs">
-      </div>
+      <div id="songs"></div>
+      <div id="playlistContainer"></div>
       <Div id="modal">
         <img src="" id="modalSongImg">
         <p id="modalSongName"></p>
         <audio src="" controls id="modalSongUrl"></audio>
-        <label for="cbLoop">Loop</label>
-        <input type="checkbox" id="cbLoop">
+        <div class="row">
+          <label for="cbLoop">Loop</label>
+          <input type="checkbox" id="cbLoop">
+        </div>
         <button id="btnSair">Sair</button>
       </Div>
+      <div id="menu-buttons">
+        <button id="btnHome" style="border-radius: 10px 0px 0px 0px;"><img src="./assets/img/home.png" style="filter: invert(1);"></button>
+        <button id="btnPlaylist" style="border-left: 1px solid white; border-radius: 0px 10px 0px 0px;"><img src="./assets/img/list.png" style="filter: invert(1);"></button>
+      </div>
       <script src="js/script.js"></script>
     </body>
   </html>
