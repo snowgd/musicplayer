@@ -43,7 +43,7 @@ body {
 }
 
 .song{
-    width: 137px;
+    width: 138px;
     height: 220px;
     display: flex;
     padding: 10px;
@@ -119,7 +119,7 @@ body {
     height: 60px;
     background-color: black;
     position: fixed;
-    transform: translateY(1135%);
+    transform: translateY(1158%);
     flex-direction: row;
     border-radius: 10px 10px 0px 0px;
 }
